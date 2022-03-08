@@ -1,0 +1,16 @@
+{
+  "name": "api-todo-list",
+  "version": "1.0.0",
+  "description": "api para salvar uma lista de tarefas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arcenio Souza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "type": "module"
+}
