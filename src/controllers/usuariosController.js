@@ -15,8 +15,8 @@ export function getUsuarios(app){
 
 export function getUsuario(app){
    app.get("/usuario/:id", (req, res) => {
-      const id = req.params.id
-      res.send(bdUsuarios[id])
+      const id = parseInt(req.params.id)
+      res.send(bdUsuarios[id - 1])
    })
 }
 
