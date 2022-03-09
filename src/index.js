@@ -13,6 +13,8 @@ app.listen(port, () => console.log("Servidor funcionando em http://localhost:"+p
 usuariosController.getUsuario(app)
 usuariosController.getUsuarios(app)
 usuariosController.postUsuario(app)
+usuariosController.deleteUsuario(app)
+usuariosController.putUsuario(app)
 
 tarefasController.getTarefa(app)
 tarefasController.getTarefas(app)
