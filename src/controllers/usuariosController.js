@@ -1,5 +1,5 @@
 import Usuarios from "../models/Usuarios.js"
-import { bdUsuarios } from "../../infra/bdUsuarios.js"
+import { bdUsuarios } from "../infra/bdUsuarios.js"
 
 let cont = 0
 

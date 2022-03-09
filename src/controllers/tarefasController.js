@@ -1,5 +1,5 @@
 import Tarefas from "../models/Tarefas.js"
-import { bdTarefas } from "../../infra/bdtarefas.js"
+import { bdTarefas } from "../infra/bdTarefas.js"
 
 let cont = 0
 
