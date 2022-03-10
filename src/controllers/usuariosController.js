@@ -1,5 +1,6 @@
 import Usuarios from "../models/Usuarios.js"
-import { bdUsuarios } from "../infra/bdUsuarios.js"
+import bdUsuarios from "../infra/bdUsuarios.js"
+import DatabaseMetodos from "../infra/DatabaseMetodos.js"
 
 let cont = 0
 

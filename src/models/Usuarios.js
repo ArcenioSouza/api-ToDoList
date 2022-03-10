@@ -8,7 +8,6 @@ class Usuarios {
       this.email = email,
       this.telefone = telefone
    }
-
 }
 
 export default Usuarios;
