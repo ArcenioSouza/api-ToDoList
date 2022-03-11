@@ -1,6 +1,6 @@
 import Usuarios from "../models/Usuarios.js"
 import bdUsuarios from "../infra/bdUsuarios.js"
-import DatabaseMetodos from "../infra/DatabaseMetodos.js"
+import DbMetodosUsuario from "../infra/DbMetodosUsuario.js"
 
 let cont = 0
 
@@ -10,22 +10,22 @@ function contador() {
 
 export function getUsuarios(app){
    app.get("/usuarios", (req, res) => {
-      res.send(Object.values(bdUsuarios))
+      const usuarios = DbMetodosUsuario.selectAll()
+      res.send(usuarios)
    })
 }
 
 export function getUsuario(app){
    app.get("/usuario/:id", (req, res) => {
       const id = parseInt(req.params.id)
-      res.send(bdUsuarios[id - 1])
+      res.send(DbMetodosUsuario.selectAll())
    })
 }
 
 export function postUsuario(app){
    app.post("/usuarios", (req, res) => {
-      const usuario = new Usuarios(contador(), req.body.nome, req.body.sobrenome, req.body.dataNascimento, req.body.email, req.body.telefone)
-      bdUsuarios.push(usuario)
-      res.send(usuario)
+      DbMetodosUsuario.insertInto()
+      res.send("Inserido com sucesso")
    })
 }
 
@@ -45,3 +45,5 @@ export function putUsuario(app){
       res.send(`Registo do id ${id} atualizado`)
    })
 }
+
+DbMetodosUsuario.createTable();
