@@ -28,3 +28,5 @@ export function postTarefa(app){
       res.send(tarefa)
    })
 }
+
+DbMetodosTarefa.createTable();
